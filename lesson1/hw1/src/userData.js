@@ -8,4 +8,4 @@ export const userData = {
    
 };
 
-export const userContext = React.createContext(userData.data)
+export const userContext = React.createContext({})

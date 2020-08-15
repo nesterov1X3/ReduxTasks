@@ -4,15 +4,22 @@ import { userData, userContext } from './userData.js'
 
 class App extends React.Component {
     state = {
-        userData: userData
+        userData: {
+            name: 'Nikola Tesla',
+            avatar_url: '#https://avatars3.githubusercontent.com/u10001'
+        }
     }
 
 
     render() {
+       
         return (
-            <div className="page">
-               <Header/>
-            </div>
+            <userContext.Provider value={this.state.userData}>
+                <div className="page">
+                    <Header />
+                </div>
+            </userContext.Provider>
+
         )
 
     }
