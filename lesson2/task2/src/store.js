@@ -31,12 +31,12 @@ const counterReducer = (state = initialState, action) => {
         case INCREMENT:
             return {
                 ...state,
-                history: state.history.concat(`+1`)
+                history: state.history.concat("+1")
             };
         case DECREMENT:
             return {
                 ...state,
-                history: state.history.concat(`-1`)
+                history: state.history.concat(-1)
             };
         case RESET:
             return {
