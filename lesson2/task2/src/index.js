@@ -26,7 +26,7 @@ store.subscribe(() => {
     // console.log(state)
     const currentValue = state.history.reduce((acc, value) => acc + Number(value), 0);
 
-    const historyString = state.history.join(" ");
+    const historyString = state.history.join("");
 
     // console.log(state.history)
     resultElem.textContent =
