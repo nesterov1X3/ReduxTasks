@@ -24,7 +24,7 @@ resetBtn.addEventListener('click', onReset);
 store.subscribe(() => {
     const state = store.getState();
     // console.log(state)
-    const currentValue = state.history.reduce((acc, value) => acc + value, 0);
+    const currentValue = state.history.reduce((acc, value) => acc + Number(value), 0);
     // console.log(currentValue)
     const addPlus = state.history
         .filter(item => item > 0)
@@ -33,8 +33,8 @@ store.subscribe(() => {
     const minus = state.history
         .filter(item => item < 0)
     //    .map(item => `-${item}`)
-    const historyString =addPlus.concat(minus).join(' ');
-    // const historyString = state.history.join(' ');
+    // const historyString =addPlus.concat(minus).join(' ');
+    const historyString = state.history.join(' ');
 
     console.log(state.history)
     resultElem.textContent =
