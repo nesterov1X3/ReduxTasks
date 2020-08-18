@@ -33,11 +33,11 @@ const store = createStore(
     counterReducer, 
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-console.log(store.getState())
+// console.log(store.getState())
 store.dispatch(increment())
-store.dispatch(increment())
-store.dispatch(increment())
+store.dispatch(decrement())
 
-console.log(store.getState())
+
+
 
 
