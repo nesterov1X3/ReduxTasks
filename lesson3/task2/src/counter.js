@@ -29,13 +29,10 @@ const counterReducer = (state = 0, action) => {
     }
 }
 
-const store = createStore(
+export const store = createStore(
     counterReducer, 
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-// console.log(store.getState())
-store.dispatch(increment())
-store.dispatch(decrement())
 
 
 
