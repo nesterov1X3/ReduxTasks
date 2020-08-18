@@ -1,4 +1,4 @@
-import  {addUser, deleteUser} from './users.js';
+import  {addUser, deleteUser} from './users.actions.js';
 import store from './store.js';
 
 store.dispatch(addUser({
@@ -19,3 +19,5 @@ store.dispatch(deleteUser(76))
 store.subscribe(() => {
     const state = store.getState()
 })
+// const state = store.getState()
+// console.log(state)

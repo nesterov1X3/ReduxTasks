@@ -1,8 +1,5 @@
 import { createStore } from 'redux'
-import {formUsers} from './users.js'
-
-
-
+import {formUsers} from './users.reducer.js'
 
 
 const store = createStore(formUsers);
