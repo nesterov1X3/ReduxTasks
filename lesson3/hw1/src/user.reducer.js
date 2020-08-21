@@ -7,10 +7,10 @@ const user = {
  const userReducer = (state = user, action) => {
     switch (action.type) {
         case SAVE_USER: {
-            return {
-                ...state,
-                user: action.payload.userData
-            }
+            return (
+                // ...state,
+                action.payload.userData
+            )
         };
         case DELETE_USER:  
           return null;
