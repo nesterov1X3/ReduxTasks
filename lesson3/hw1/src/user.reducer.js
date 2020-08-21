@@ -1,15 +1,15 @@
 import { SAVE_USER, DELETE_USER } from './user.actions.js'
 
-const userState = {
-    userList: []
+const user = {
+    
 }
 
- const userReducer = (state = userState, action) => {
+ const userReducer = (state = user, action) => {
     switch (action.type) {
         case SAVE_USER: {
             return {
                 ...state,
-                userList: state.userList.concat(action.payload.userData)
+                user: action.payload.userData
             }
         };
         case DELETE_USER:  

@@ -15,6 +15,6 @@ store.dispatch(addProduct({id:313, name: 'meat'}))
 
 store.dispatch(removeProduct(33))
 
-store.dispatch(setUser({ name: 'ros'}))
+store.dispatch(setUser({ name: 'ros', age: 43}))
 
 store.dispatch(removeUser())
