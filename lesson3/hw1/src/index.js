@@ -1,13 +1,12 @@
 
 import {addProduct, removeProduct} from './cart.actions.js'
 import store from './store.js';
-import { english, spanish } from './language.actions.js';
+import { setLanguage } from './language.actions.js';
 import {setUser, removeUser} from './user.actions'
 
 store.subscribe(() => console.log(store.getState()))
 
-store.dispatch(english());
-store.dispatch(spanish());
+store.dispatch(setLanguage('spa'));
 
 
 

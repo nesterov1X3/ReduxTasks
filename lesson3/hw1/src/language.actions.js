@@ -3,20 +3,23 @@ export const SPANISH = "LANGUAGE/SPANISH";
 export const RUSSIAN = "LANGUAGE/RUSSIAN";
 
 
-export const english = () => {
+export const setLanguage = lang => {
     return {
-        type: ENGLISH
+        type: ENGLISH,
+        payload: {
+            lang
+        }
     }
 };
 
-export const spanish = () => {
-    return {
-        type: SPANISH
-    }
-};
+// export const spanish = () => {
+//     return {
+//         type: SPANISH
+//     }
+// };
 
-export const russian = () => {
-    return {
-        type: RUSSIAN
-    }
-};
+// export const russian = () => {
+//     return {
+//         type: RUSSIAN
+//     }
+// };
