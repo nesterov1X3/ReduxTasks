@@ -1,5 +1,5 @@
 export const ADD_PRODUCT = 'PRODUCT/ADD_PRODUCT ';
-export const DELETE_PRODUCT = 'PRODUCT/DELETE_PRODUCT';
+export const REMOVE_PRODUCT = 'PRODUCT/DELETE_PRODUCT';
 
 
 export const addProduct = productData => {
@@ -12,9 +12,9 @@ export const addProduct = productData => {
 };
 
 
-export const deleteProduct = productId => {
+export const removeProduct = productId => {
     return {
-        type: DELETE_PRODUCT,
+        type: REMOVE_PRODUCT,
         payload: {
             productId
         }

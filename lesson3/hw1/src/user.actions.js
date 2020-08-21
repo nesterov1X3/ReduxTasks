@@ -2,7 +2,7 @@ export const SAVE_USER = 'USER/SAVE_USER';
 export const DELETE_USER = 'USER/DELETE_USER';
 
 
-export const saveUser = userData => {
+export const setUser = userData => {
     return {
         type: SAVE_USER,
         payload: {
@@ -12,7 +12,7 @@ export const saveUser = userData => {
 };
 
 
-export const deleteUser = () => {
+export const removeUser = () => {
     return {
         type: DELETE_USER,
     }
