@@ -17,7 +17,7 @@ const user = {
 
         
         default:
-            return state
+            return null
     }
 };
 
