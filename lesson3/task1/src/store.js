@@ -7,7 +7,8 @@ const appReducer = combineReducers({
     users: usersReducer
 
 })
-const store = createStore(appReducer);
+const store = createStore(appReducer,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 
 export default store;
