@@ -21,8 +21,10 @@ const users = [
 ];
 
 const initialState = {
-    filterText: "",
-    usersList: users,
+    users: {
+        filterText: '',
+        usersList: users,
+    }
 }
 
 export const userReducer = (state = initialState, action) => {
@@ -30,7 +32,10 @@ export const userReducer = (state = initialState, action) => {
         case USER_FILTER:
             return {
                 ...state,
-                filterText: action.payload.filterText,
+                users: {
+                    filterText: action.payload.filterText,
+                    usersList: users,
+                  },
 
             };
         default:

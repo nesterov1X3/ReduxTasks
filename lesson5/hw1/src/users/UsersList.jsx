@@ -3,16 +3,16 @@ import User from './User.jsx';
 import Filter from '../Filter.jsx';
 import { connect } from 'react-redux'
 import { userFilter } from './user.action.js'
-import { usersSelectorUserList, usersSelectorFilterText } from './users.selectors.js'
+import { usersSelectorUserList, usersSelectorFilterText, filteredUsersSelector } from './users.selectors.js'
 
 
 const UsersList = ({ users, filterText, filterUserChange }) => {
 
 
-    const filterUsers = () =>
-        users.filter((user) =>
-            user.name.toUpperCase().includes(filterText.toUpperCase())
-        );
+    // const filterUsers = () =>
+    //     users.filter(user =>
+    //         user.name.toLowerCase().includes(filterText.toLowerCase())
+    //     );
 
     const onChange = (e) => {
         filterUserChange(e.target.value)
@@ -20,13 +20,13 @@ const UsersList = ({ users, filterText, filterUserChange }) => {
 
     return (
         <>
-            <div>{filterUsers().map(user => (
+            <div>{users.map(user => (
                 <User key={user.id} {...user} />
             ))
             }</div>
 
             <Filter
-                count={filterUsers().length}
+                count={users.length}
                 onChange={onChange}
                 filterText={filterText}
             />
@@ -37,7 +37,7 @@ const UsersList = ({ users, filterText, filterUserChange }) => {
 
 const mapState = state => {
     return {
-        users: usersSelectorUserList(state),
+        users: filteredUsersSelector(state),
         filterText: usersSelectorFilterText(state)
     }
 }

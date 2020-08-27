@@ -4,7 +4,9 @@ export const userFilter = userData => {
     return {
         type:USER_FILTER,
         payload: {
-            userData
+            userData,
         }
+            
+        
     }
 }
