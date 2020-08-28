@@ -14,8 +14,9 @@ const UsersList = ({ users, filterText, filterUserChange }) => {
     //         user.name.toLowerCase().includes(filterText.toLowerCase())
     //     );
 
-    const onChange = (e) => {
-        filterUserChange(e.target.value)
+    const onChange = (event) => {
+        const filterTextEvent = event.target.value;
+        filterUserChange(filterTextEvent)
     };
 
     return (
