@@ -13,7 +13,7 @@ export const filteredUsersSelector = createSelector(
      usersSelectorFilterText],
     (usersList, filterText) => {
         return usersList.filter(({ name }) =>
-            name.toLowerCase().includes(filterText),
+            name.toLowerCase().includes(filterText.toLowerCase()),
         );
     },
 );

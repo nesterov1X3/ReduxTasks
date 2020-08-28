@@ -72,7 +72,7 @@ export const userReducer = (state = initialState, action) => {
             return {
                 ...state,
                 users: {
-                    filterText: action.payload.filterText,
+                    filterText: action.payload.userData,
                     usersList: users,
                   },
 
