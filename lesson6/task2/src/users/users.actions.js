@@ -23,7 +23,7 @@ export const fetchUserData = (userName) => {
     return function(dispatch){
       getUserData(userName)
         .then(userData => {
-            // console.log(userData);
+            dispatch(showSpinner())
             dispatch(userDataRecieved(userData))
         });
     }

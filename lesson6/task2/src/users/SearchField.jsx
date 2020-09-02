@@ -11,7 +11,6 @@ class SearchField extends React.Component {
         this.setState({userName:event .target.value})
     }
     handleUserSearch = () => {
-        this.props.showSpinner()
         this.props.fetchUserData(this.state.userName)
     }
     render() {
@@ -27,13 +26,13 @@ class SearchField extends React.Component {
     };
 };
 SearchField.propTypes ={
-    showSpinner: PropTypes.func.isRequired,
-    userDataRecieved: PropTypes.func.isRequired,
+    // showSpinner: PropTypes.func.isRequired,
+    // userDataRecieved: PropTypes.func.isRequired,
     fetchUserData: PropTypes.func.isRequired,
 }
 const mapDispatch ={
-    showSpinner: usersActions.showSpinner,
-    userDataRecieved: usersActions.userDataRecieved,
+    // showSpinner: usersActions.showSpinner,
+    // userDataRecieved: usersActions.userDataRecieved,
     fetchUserData: usersActions.fetchUserData
 }
 export default connect(null, mapDispatch)(SearchField);
