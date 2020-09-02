@@ -1,4 +1,4 @@
-import {MONTH_DATA} from './month.actions.js';
+import {MONTH_DATA} from './weather.actions.js';
 
 
 export const monthReducer = (state = [], action) => {

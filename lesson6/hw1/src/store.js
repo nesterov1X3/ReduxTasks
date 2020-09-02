@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import {monthReducer} from "./weather/month.reducer.js";
+import {monthReducer} from "./weather/weather.reducer.js";
 
 const reducer = combineReducers({
   weather: monthReducer,

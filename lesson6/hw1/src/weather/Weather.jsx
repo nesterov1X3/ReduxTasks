@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux';
-import {getWeatherDataAction} from './month.actions.js'
+import {getWeatherData} from './weather.actions.js'
 
 
 class Weather extends React.Component {
@@ -30,7 +30,7 @@ const mapState = state => {
     }
 }
 const mapDispatch = {
-    getWeatherData: getWeatherDataAction
+    getWeatherData: getWeatherData
 }
 
 export default connect(mapState, mapDispatch)(Weather);

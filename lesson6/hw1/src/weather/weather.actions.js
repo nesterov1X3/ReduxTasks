@@ -1,5 +1,5 @@
 export const MONTH_DATA = 'MONTH_DATA';
-import { getWeatherData } from './month.gateway.js'
+import { getData } from './month.gateway.js'
 
 export const monthDataRecieved = (weatherData) => {
     return {
@@ -11,9 +11,9 @@ export const monthDataRecieved = (weatherData) => {
 }
 
 
-export const getWeatherDataAction = () => {
+export const getWeatherData = () => {
     return (dispatch) => {
-        getWeatherData().then((weatherData) =>
+        getData().then((weatherData) =>
         dispatch(monthDataRecieved(weatherData))
       );
     };
