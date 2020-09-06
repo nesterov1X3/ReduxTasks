@@ -14,8 +14,8 @@ class Weather extends React.Component {
         <ul className="cities-list">
           {this.props.weatherData.weather.map((city) => (
             <li key={city.id} className="city">
-              <span className="city__name">{city.name}</span>
-              <span className="city__temperature">{city.temperature}</span>
+              <span className="city__name">{city.city}</span>
+              <span className="city__temperature">{city.temp}</span>
             </li>
           ))}
         </ul>
